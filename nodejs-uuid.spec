@@ -2,7 +2,7 @@
 Summary:	Rigorous implementation of RFC4122 (v1 and v4) UUIDs
 Name:		nodejs-%{pkg}
 Version:	1.4.1
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Libraries
 Source0:	http://registry.npmjs.org/%{pkg}/-/%{pkg}-%{version}.tgz
@@ -23,8 +23,8 @@ mv package/* .
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{nodejs_libdir}/%{pkg}
-cp -pr rng.js %{pkg}.js package.json $RPM_BUILD_ROOT%{nodejs_libdir}/%{pkg}
+install -d $RPM_BUILD_ROOT%{nodejs_libdir}/node-%{pkg}
+cp -pr rng.js %{pkg}.js package.json $RPM_BUILD_ROOT%{nodejs_libdir}/node-%{pkg}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -32,4 +32,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.md
-%{nodejs_libdir}/%{pkg}
+%{nodejs_libdir}/node-%{pkg}
