@@ -2,7 +2,7 @@
 Summary:	Rigorous implementation of RFC4122 (v1 and v4) UUIDs
 Name:		nodejs-%{pkg}
 Version:	1.4.1
-Release:	2
+Release:	3
 License:	MIT
 Group:		Development/Libraries
 Source0:	http://registry.npmjs.org/%{pkg}/-/%{pkg}-%{version}.tgz
